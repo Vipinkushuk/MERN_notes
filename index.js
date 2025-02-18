@@ -55,7 +55,7 @@ const generateId = () => {
   })
 
 app.get('/', (request, response) => {
-  response.send('<h1>Hello World!</h1>')
+  response.sendFile(path.join(__dirname, 'dist', 'index.html'));
 })
 
 app.get('/api/notes', (request, response) => {
